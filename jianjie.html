@@ -42,7 +42,7 @@
         <div class="card">
             <div class="pictureAndText clearfix">
                 <div  class="picture">
-                    <img src="head.jpg" alt="头像" width="299px" height="345px" alt="头像">
+                    <img src="1.jpg" alt="头像" width="299px" height="345px" alt="头像">
                 </div>
                 <div class="text">
                         <span class="welcome">Hello
@@ -78,37 +78,90 @@
                     <use xlink:href="#icon-iconfontweibo"></use> </svg></a>
         </footer>
     </div>
-    <a class="button" href="#">下载PDF简历</a>
-    <p>
+    <p class="downloadResume-wrapper">
+        <a class="downloadResume" href="./resume.pdf.txt" target="blank" download="">下载PDF简历</a>
+    </p>
+    
+    <p class="selfIntroduction">
         "陈大斌，刚入门的前端工程师，现在在饥人谷学习"
         <br>
         "技能：前端开发"
     </p>
     </main>
-    <section>
+    <section class="skills">
         <h2>技能</h2>
-        <ol>
-            <li>HTML</li>
-            <li>JS</li>
-            <li>JQuery</li>
-            <li>Vue</li>
-            <li>React</li>
-            <li>HTTP</li>
+        <ol class="clearfix">
+            <li>
+                <h3> HTML</h3>
+                <div class="progressBar" style="width:90%">
+                    <div class="progress"></div>
+                </div>
+            </li>
+            <li>
+                 <h3> JS</h3>
+                <div class="progressBar" style="width:90%">
+                    <div class="progress"></div>
+                </div>
+            </li>
+            <li> 
+                <h3> JQuery</h3>
+                <div class="progressBar" style="width:10%">
+                    <div class="progress"></div>
+                </div>
+            </li>
+            <li>
+                 <h3> VUE</h3>
+                <div class="progressBar" style="width:70%">
+                    <div class="progress"></div>
+                </div>
+            </li>
+            <li> 
+                <h3> React</h3>
+                <div class="progressBar" style="width:50%">
+                    <div class="progress"></div>
+                </div>
+            </li>
+            <li> 
+                <h3> HTTP</h3>
+                <div class="progressBar" style="width:30%">
+                    <div class="progress"></div>
+                </div>
+            </li>
         </ol>
     </section>
-    <section>
+    <section class="portfolio">
         <h2>作品集</h2>
         <nav>
-            <ol>
-                <li>所有</li>
-                <li>框架</li>
-                <li>原生JS&CSS</li>
+            <ol class="clearfix">
+                <li id="portfolio1">所有</li>
+                <li id="portfolio2">框架</li>
+                <li id="portfolio3">原生JS&CSS</li>
             </ol>
+            <div id="portfolioBar" class="bar state-1">
+                <div class="bar-inner"></div>
+            </div>
         </nav>
-        <div class="jobs">
-            <div class="big"></div>
-            <div class="small"></div>
-            <div class="small"></div>
+        <script>
+        portfolio1.onclick=function(){
+            portfolioBar.className="bar state-1"
+        }
+        portfolio2.onclick=function(){
+            portfolioBar.className="bar state-2"
+        }
+        portfolio3.onclick=function(){
+            portfolioBar.className="bar state-3"
+        }
+        </script>
+        <div class="works" style="height:597px;">
+            <div class="big" style="top:0; left:0;">
+                <img src="./3.JPG" height="606px" width="576" alt="阳光">
+            </div>
+            <div class="small" style="top:0; left:625px;">
+                    <img src="./4.JPG" height="293px" width="278px" alt="教学">
+            </div>
+            <div class="small" style="top:312px; left:625px;">
+                    <img src="./5.JPG" height="293px" width="278px" alt="阳光">
+            </div>
         </div>
     </section>
 </body>
